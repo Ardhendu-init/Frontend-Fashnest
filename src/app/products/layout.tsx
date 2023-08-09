@@ -19,11 +19,12 @@ const sortOptions = [
   { name: "Price: High to Low", href: "#", current: false },
 ];
 const subCategories = [
-  { name: "Totes", href: "#" },
-  { name: "Backpacks", href: "#" },
-  { name: "Travel Bags", href: "#" },
-  { name: "Hip Bags", href: "#" },
-  { name: "Laptop Sleeves", href: "#" },
+  { name: "Jeans", href: "#" },
+  { name: "T-shirt", href: "#" },
+  { name: "Shirt", href: "#" },
+  { name: "Jacket", href: "#" },
+  { name: "Saree", href: "#" },
+  { name: "Sunglass", href: "#" },
 ];
 const filters = [
   {
