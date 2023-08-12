@@ -3,7 +3,7 @@ import SendIcon from "@mui/icons-material/Send";
 
 const Newsletter: React.FC = () => {
   return (
-    <div className="bg-[#fcf5f5] py-12 text-[#005566]">
+    <div className="bg-[#fcf5f5] py-12 text-[#005566] mt-10">
       <div className="container mx-auto flex flex-col items-center">
         <h1 className="sm:text-[30px] lg:text-[50px]">Newsletter</h1>
         <div className="text-[20px]   mb-6 text-center ">

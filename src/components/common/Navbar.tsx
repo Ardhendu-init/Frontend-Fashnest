@@ -81,24 +81,23 @@ const Navbar = () => {
             ))}
 
             {/* Cart Icon */}
-            <button
-              className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium "
-              onClick={() => alert("Cart clicked")}
-            >
-              <div className="h-6 w-6 relative">
-                <ShoppingBagIcon className="h-full w-full" />
-                <span className="inline-flex justify-center items-center absolute rounded-[50%] -top-2 -right-4 h-5 w-5 bg-red-50 px-2 py-1 text-xs  text-red-700 ring-1 ring-inset ring-red-600/10">
-                  3
-                </span>
-              </div>
-            </button>
+            <Link href="/cart">
+              <button
+                className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium "
+                // onClick={() => alert("Cart clicked")}
+              >
+                <div className="h-6 w-6 relative">
+                  <ShoppingBagIcon className="h-full w-full" />
+                  <span className="inline-flex justify-center items-center absolute rounded-[50%] -top-2 -right-4 h-5 w-5 bg-red-50 px-2 py-1 text-xs  text-red-700 ring-1 ring-inset ring-red-600/10">
+                    3
+                  </span>
+                </div>
+              </button>
+            </Link>
 
             {/* Login/Logout Button */}
-            <button
-              className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium"
-              onClick={() => alert("Login/Logout clicked")}
-            >
-              Login
+            <button className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+              <Link href="/auth/login">Login</Link>
             </button>
           </div>
         </div>
@@ -118,17 +117,16 @@ const Navbar = () => {
           ))}
 
           {/* Cart Icon */}
-          <button
-            className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium "
-            onClick={() => alert("Cart clicked")}
-          >
-            <div className="h-6 w-6 relative">
-              <ShoppingBagIcon className="h-full w-full" />
-              <span className="inline-flex justify-center items-center absolute rounded-[50%] -top-2 -right-4 h-5 w-5 bg-red-50 px-2 py-1 text-xs  text-red-700 ring-1 ring-inset ring-red-600/10">
-                3
-              </span>
-            </div>
-          </button>
+          <Link href="/cart">
+            <button className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium ">
+              <div className="h-6 w-6 relative">
+                <ShoppingBagIcon className="h-full w-full" />
+                <span className="inline-flex justify-center items-center absolute rounded-[50%] -top-2 -right-4 h-5 w-5 bg-red-50 px-2 py-1 text-xs  text-red-700 ring-1 ring-inset ring-red-600/10">
+                  3
+                </span>
+              </div>
+            </button>
+          </Link>
 
           {/* Login/Logout Button */}
           <button

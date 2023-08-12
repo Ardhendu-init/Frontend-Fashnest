@@ -16,13 +16,13 @@ const categories = [
     name: "Wrist-Watch",
     image: "/images/category/wrist-watch.jpg",
   },
-  { id: "caps", name: "Caps", image: "/images/category/caps.jpg" },
+  { id: "caps", name: "Caps", image: "/images/category/jacket.jpg" },
   // Add more categories here
 ];
 
 const Categories: React.FC = () => {
   return (
-    <section className="py-8 ">
+    <section className="py-8 px-4">
       <h2 className="sm:text-[30px] lg:text-[50px] font-semibold my-6 text-center text-[#005566]">
         Categories
       </h2>
