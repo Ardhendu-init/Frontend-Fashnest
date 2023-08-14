@@ -10,6 +10,8 @@ import {
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import Pagination from "@/components/common/Pagination";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const sortOptions = [
   { name: "Most Popular", href: "#", current: true },
@@ -19,12 +21,12 @@ const sortOptions = [
   { name: "Price: High to Low", href: "#", current: false },
 ];
 const subCategories = [
-  { name: "Jeans", href: "#" },
-  { name: "T-shirt", href: "#" },
-  { name: "Shirt", href: "#" },
-  { name: "Jacket", href: "#" },
-  { name: "Saree", href: "#" },
-  { name: "Sunglass", href: "#" },
+  { name: "jeans", href: "#" },
+  { name: "tshirt", href: "#" },
+  { name: "shirt", href: "#" },
+  { name: "jackets", href: "#" },
+  { name: "saree", href: "#" },
+  { name: "sunglass", href: "#" },
 ];
 const filters = [
   {
@@ -70,6 +72,8 @@ function classNames(...classes: any) {
 
 const ProductLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const path = usePathname();
+
   return (
     <div className="bg-white">
       <div>
@@ -198,16 +202,19 @@ const ProductLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
         </Transition.Root>
 
         <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-              Products
-            </h1>
+          <div className="flex items-baseline justify-between border-b border-gray-200 pb-3 pt-24">
+            <div className="flex justify-between w-[40%]">
+              <h1 className="text-lg font-medium">Filters</h1>
+              <h1 className="text-base  tracking-tight text-gray-900">
+                {path.slice(1).toUpperCase()}
+              </h1>
+            </div>
 
             <div className="flex items-center">
               <Menu as="div" className="relative inline-block text-left">
-                <div>
-                  <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
-                    Sort
+                <div className="border">
+                  <Menu.Button className="group inline-flex justify-center px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900">
+                    Sort by:
                     <ChevronDownIcon
                       className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                       aria-hidden="true"
@@ -253,8 +260,8 @@ const ProductLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
                 type="button"
                 className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7"
               >
-                <span className="sr-only">View grid</span>
-                <Squares2X2Icon className="h-5 w-5" aria-hidden="true" />
+                {/* <span className="sr-only">View grid</span> */}
+                {/* <Squares2X2Icon className="h-5 w-5" aria-hidden="true" /> */}
               </button>
               <button
                 type="button"
@@ -281,8 +288,18 @@ const ProductLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
                   className="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900"
                 >
                   {subCategories.map((category) => (
-                    <li key={category.name}>
-                      <a href={category.href}>{category.name}</a>
+                    <li
+                      key={category.name}
+                      className={`${
+                        path.slice(10) == category.name && "bg-red-100"
+                      } py-1 `}
+                    >
+                      <Link
+                        href={`/category/${category.name}`}
+                        className="capitalize ml-1"
+                      >
+                        {category.name}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -350,7 +367,7 @@ const ProductLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
               <div className="lg:col-span-3">{children}</div>
             </div>
           </section>
-          <Pagination />
+          {/* <Pagination /> */}
         </main>
       </div>
     </div>

@@ -25,7 +25,7 @@ const SignupForm: React.FC = () => {
             <input
               type="text"
               id="fullName"
-              className="w-full p-2 border rounded focus:ring focus:ring-blue-300"
+              className="w-full p-2 border rounded focus:outline-none  "
               placeholder="Enter your full name"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
@@ -38,7 +38,7 @@ const SignupForm: React.FC = () => {
             <input
               type="email"
               id="email"
-              className="w-full p-2 border rounded focus:ring focus:ring-blue-300"
+              className="w-full p-2 border rounded focus:outline-none  "
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -51,7 +51,7 @@ const SignupForm: React.FC = () => {
             <input
               type="password"
               id="password"
-              className="w-full p-2 border rounded focus:ring focus:ring-blue-300"
+              className="w-full p-2 border rounded focus:outline-none  "
               placeholder="Choose a password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}

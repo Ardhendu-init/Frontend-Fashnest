@@ -6,7 +6,7 @@ const categories = [
   { id: "jeans", name: "Jeans", image: "/images/category/jeans.jpg" },
   { id: "tshirt", name: "T-shirt", image: "/images/category/tshirt.jpg" },
   { id: "shirt", name: "Shirt", image: "/images/category/shirt.jpg" },
-  { id: "jacket", name: "Jacket", image: "/images/category/jacket.jpg" },
+  { id: "jackets", name: "Jackets", image: "/images/category/jacket.jpg" },
   { id: "saree", name: "Saree", image: "/images/category/saree.jpg" },
   { id: "sunglass", name: "Sunglass", image: "/images/category/sunglass.jpg" },
   { id: "shoes", name: "Shoes", image: "/images/category/shoes.jpg" },
@@ -23,7 +23,7 @@ const categories = [
 const Categories: React.FC = () => {
   return (
     <section className="py-8 px-4">
-      <h2 className="sm:text-[30px] lg:text-[50px] font-semibold my-6 text-center text-[#005566]">
+      <h2 className="sm:text-[30px] lg:text-[40px] font-semibold my-6  text-[#005566]">
         Categories
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
